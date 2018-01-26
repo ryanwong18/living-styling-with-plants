@@ -1,6 +1,20 @@
-@import "components/header";
-@import "components/footer";
+@import "normalize";
+@import "variables";
+@import "mixin";
+
+html {
+    font-size:10px;
+}
 
 body {
-    background-color:red;
+    font-family: 'Poppins', sans-serif;
 }
+
+.wrapper {
+    max-width:900px;
+    margin:0 auto;
+}
+
+
+
+

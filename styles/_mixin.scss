@@ -1,0 +1,19 @@
+//p tag mixin
+@mixin pstyle($fontsize, $fontcolor, $lineheight) {
+    font-size:$fontsize;
+    color:$fontcolor;
+    line-height:$lineheight;
+}
+
+@mixin h3style ($fontsize, $fontcolor, $lineheight, $fontstyle) {
+    font-size:$fontsize;
+    color:$fontcolor;
+    line-height:$lineheight;
+    font-style:$fontstyle;
+}
+
+@mixin h4style ($fontsize, $fontcolor, $texttransform) {
+    font-size:$fontsize;
+    color:$fontcolor;
+    text-transform: $texttransform;
+}
