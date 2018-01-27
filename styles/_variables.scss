@@ -1,18 +1,30 @@
-// font line heights
-$lineheight:1.5;
+//font color for nav, headings
+$primarycolor:#1a1a26;
 
 // h1 fonts
-$h1fontsize:6rem;
-$h1fontcolor:#1a1a26;
+$h1fontsize:5rem;
 
 //h2 fonts
 $h2fontsize:3.6rem;
-$h2fontcolor:#1a1a26;
 
 // grid margins
-$margin-right:2rem;
-$margin-bottom:2rem;
+$gridmarginright:30px;
 
 //spacing between sections
-$margin-bottom:3rem;
+$margin-bottom:100px;
 
+//p styles
+$pcolor:#888890;
+$plineheight:2rem;
+
+//margin in sections
+$secondary-margin-bottom:50px;
+
+//after lines
+$afterlineoutsidecolor:#a8edea;
+$afterlineinsidecolor:#f5efef;
+
+//discount styling
+$hotcolor:#ff9a9e;
+$discountcolor:#f6b895;
+$newcolor:#79dad6;
