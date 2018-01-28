@@ -96,7 +96,7 @@ h2 {
     position:relative;
     .header-overlay {
         position:absolute;
-        z-index:10;
+        z-index:200;
         top:0;
         left:0;
         right:0;
@@ -129,7 +129,7 @@ h2 {
     }
     .header-arrows {
         position:absolute;
-        z-index:10;
+        z-index:100;
         top:0;
         right:3%;
         bottom:0;
@@ -138,7 +138,7 @@ h2 {
         justify-content:space-between;
         align-items: center;
         a {
-            font-size:3rem;
+            font-size:4rem;
             color:$primarycolor;
         }
         a:nth-of-type(2) {
@@ -161,11 +161,10 @@ h2 {
             background-color:$primarycolor;
             margin:5px;
         }
+        div:nth-of-type(2) {
+            background-color:$pcolor;
+        }
     }
-}
-
-.header-bubbles div:hover {
-    background-color:$pcolor;
 }
 
 .homeplants-maintext {
@@ -198,7 +197,8 @@ h2 {
         width:65%;
     }
     h4 {
-        @include h4style (1.2rem, $primarycolor, uppercase, 600);
+        @include h4style (1.2rem, $primarycolor, 600, left);
+        text-transform: uppercase;
     }
     span {
         font-style: italic;
@@ -577,7 +577,7 @@ h2 {
     margin-bottom:100px;
     input {
         border:0px solid lightgrey;
-        border-bottom:1px solid #888890;
+        border-bottom:1px solid #e6e5e1;
         @include pstyle (1.2rem, $pcolor, $plineheight, left, 400);
         padding:10px 500px 10px 0;
     }
@@ -598,13 +598,12 @@ h2 {
 }
 
 .main-newsletter {
-    border-bottom:1px solid #888890;
+    border-bottom:1px solid #e6e5e1;
 }
 
 .top-footer {
-    margin-bottom:50px;
     padding-bottom:100px;
-    border-bottom:1px solid $pcolor;
+    border-bottom:1px solid #e6e5e1;
     .wrapper {
         display:flex;
         justify-content: space-between;
@@ -629,7 +628,7 @@ h2 {
     .footer-logo {
         margin-bottom:30px;
         img {
-            width:17%;
+            height:20px;
         }
     }
     .footer-information {
@@ -638,10 +637,31 @@ h2 {
             margin-bottom:30px;
         }
     }
-
+    .footer-socialmedia {
+        margin-top:15px;
+        a {
+            color:$primarycolor;
+            font-size:2rem;
+            padding-right:30px;
+        }
+        a:hover {
+            color:$pcolor;
+        }
+    }
+    .footer-title {
+        position:relative;
+    }
     h3 {
         @include h3style (2rem, $primarycolor, 1, 400);
         margin:0 0 30px 0;
+    }
+    h3::after {
+        content:"";
+        width:30px;
+        display:block;
+        position:absolute;
+        border-bottom:2px solid #a8edea;
+        bottom:15px;
     }
     .instagram {
         width:25%;
@@ -667,9 +687,24 @@ h2 {
             width:100%;
         }
         .footer-credit-card-grid {
-            margin-right:20px
+            margin-right:15px
         }
     }
 }
 
+.bottom-footer {
+    padding:30px 0;
+    .wrapper {
+        display:flex;
+        justify-content: space-between;
+    }
+    p {
+        @include pstyle (1.1rem, $pcolor, 1, normal, 400);
+        text-transform: capitalize;
+    }
+    span {
+        color:$primarycolor;
+        font-weight:500;
+    }
+}
 
