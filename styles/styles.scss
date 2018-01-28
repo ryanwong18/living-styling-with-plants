@@ -504,4 +504,172 @@ h2 {
 .blog-grid {
     display:flex;
     justify-content: space-between;
+    margin-top:80px;
+    img {
+        width:100%;
+    }
+    .blog-grid-container {
+        margin-right:30px;
+    }
+    .blog-grid-container:nth-of-type(3) {
+        margin-right:0;
+    }
+    h4 {
+        @include h4style (1.2rem, $pcolor, 400, left);
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    h3 {
+        @include h3style (1.5rem, $primarycolor, 1.5, 700);
+        margin-top:10px;
+        margin-bottom:15px;
+    }
+    p {
+        @include pstyle (1.2rem, $primarycolor, 1, left, 500);
+        text-transform: capitalize;
+        border-bottom:1px solid $primarycolor;
+        display:inline;
+    }
 }
+
+.newsletter-maintext {
+    position:relative;
+    h2 {
+        text-transform: capitalize;
+    }
+    h2::after {
+        content:"";
+        display:block;
+        width:40px;
+        height:20px;
+        border-bottom:2px solid $afterlineinsidecolor;
+        position:absolute;
+        top:40px;
+        left:480px;
+    }
+    h2::before {
+        content:"";
+        display:block;
+        width:120px;
+        height:20px;
+        border-bottom:2px solid $afterlineoutsidecolor;
+        position:absolute;
+        top:40px;
+        left:440px;
+    }
+    p {
+        width:50%;
+        text-align: center;
+        @include pstyle (1.2rem, $pcolor, $plineheight, center, 400);
+    }
+    .newsletter-ptext {
+        display:flex;
+        justify-content: center;
+        margin-bottom:50px;
+    }
+}
+
+.newsletter-form {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:100px;
+    input {
+        border:0px solid lightgrey;
+        border-bottom:1px solid #888890;
+        @include pstyle (1.2rem, $pcolor, $plineheight, left, 400);
+        padding:10px 500px 10px 0;
+    }
+    a {
+        position:absolute;
+        font-size:20px;
+        left:800px;
+    }
+}
+
+.newsletter-grid {
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:100px;
+    img {
+        height:100%;
+    }
+}
+
+.main-newsletter {
+    border-bottom:1px solid #888890;
+}
+
+.top-footer {
+    margin-bottom:50px;
+    padding-bottom:100px;
+    border-bottom:1px solid $pcolor;
+    .wrapper {
+        display:flex;
+        justify-content: space-between;
+    }
+    .footer-layout {
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        margin-right:30px;
+        &:last-of-type {
+            margin-right:0;
+        }
+        p {
+            @include pstyle (1.2rem, $pcolor, 1.5, left, 400);
+            margin:0 0 10px 0;
+        }
+        span {
+            color:$primarycolor;
+            font-weight:700;
+        }
+    }
+    .footer-logo {
+        margin-bottom:30px;
+        img {
+            width:17%;
+        }
+    }
+    .footer-information {
+        width:35%;
+        p:first-of-type {
+            margin-bottom:30px;
+        }
+    }
+
+    h3 {
+        @include h3style (2rem, $primarycolor, 1, 400);
+        margin:0 0 30px 0;
+    }
+    .instagram {
+        width:25%;
+    }
+    .footer-instagram-pictures {
+        display:flex;
+        flex-wrap:wrap;
+        img {
+            width:100%;
+        }
+        .footer-picture-grid {            
+            margin-right:10px;
+            margin-bottom:10px;
+            width:calc((100% - 20px) / 3);
+        }
+        .footer-picture-grid:nth-of-type(3n + 3) {
+            margin-right:0;
+        }
+    }
+    .footer-credit-cards {
+        display:flex;
+        img {
+            width:100%;
+        }
+        .footer-credit-card-grid {
+            margin-right:20px
+        }
+    }
+}
+
+
