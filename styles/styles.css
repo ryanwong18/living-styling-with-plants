@@ -223,50 +223,7 @@ h2 {
   height: 90vh;
   position: relative; }
   .header-hero .header-overlay {
-    position: absolute;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .header-hero .header-overlay p {
-      font-size: 2.4rem;
-      color: #888890;
-      margin: 0; }
-    .header-hero .header-overlay h1 {
-      font-size: 5rem;
-      color: #1a1a26;
-      font-weight: 500;
-      margin: 0 0 30px 0; }
-    .header-hero .header-overlay a {
-      color: #ffffff;
-      font-size: 1.2rem;
-      padding: 15px 40px;
-      text-transform: uppercase;
-      background-color: #f07f84;
-      font-weight: 700;
-      letter-spacing: 1px;
-      z-index: 50; }
-  .header-hero .header-arrows {
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    right: 3%;
-    bottom: 0;
-    left: 3%;
+    height: 90vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,25 +233,56 @@ h2 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .header-hero .header-arrows a {
+    .header-hero .header-overlay .header-overlay-text {
+      text-align: center; }
+    .header-hero .header-overlay p {
+      font-size: 2.4rem;
+      color: #888890;
+      margin: 0; }
+    .header-hero .header-overlay h1 {
+      font-size: 5rem;
+      color: #1a1a26;
+      font-weight: 500;
+      margin: 0 0 30px 0; }
+    .header-hero .header-overlay .header-overlay-text a {
+      color: #ffffff;
+      font-size: 1.2rem;
+      padding: 15px 40px;
+      text-transform: uppercase;
+      background-color: #f07f84;
+      font-weight: 700;
+      letter-spacing: 1px;
+      z-index: 50; }
+    .header-hero .header-overlay .header-arrows a {
       font-size: 4rem;
       color: #1a1a26; }
-    .header-hero .header-arrows a:nth-of-type(2) {
-      color: #888890; }
+    .header-hero .header-overlay .header-arrow-left {
+      margin-left: 30px; }
+      .header-hero .header-overlay .header-arrow-left:hover a {
+        color: #888890; }
+    .header-hero .header-overlay .header-arrow-right {
+      margin-right: 30px; }
+      .header-hero .header-overlay .header-arrow-right:hover a {
+        color: #888890; }
+    .header-hero .header-overlay .header-arrow-left {
+      text-align: left; }
   .header-hero .header-bubbles {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    width: 100%;
-    height: 100%;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    padding-bottom: 2%;
+    bottom: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0 auto;
     z-index: 40; }
     .header-hero .header-bubbles div {
       width: 10px;
@@ -374,7 +362,7 @@ h2 {
     height: 480px;
     position: relative; }
     .homeplants-grid .homeplants-image-container:hover .homeplants-overlay {
-      display: block; }
+      opacity: 1; }
   .homeplants-grid .homeplants-right-side-grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -410,7 +398,10 @@ h2 {
     flex-direction: column;
     background-color: white;
     text-align: center;
-    display: none; }
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
     .homeplants-grid .homeplants-overlay h3 {
       font-size: 2rem;
       color: #1a1a26;
@@ -426,6 +417,8 @@ h2 {
       font-weight: 400;
       padding: 0 20px 10px 20px;
       margin: 0; }
+  .homeplants-grid .square-image .homeplants-overlay {
+    width: 170px; }
 
 .popular-products-text {
   position: relative;
@@ -462,7 +455,8 @@ h2 {
     font-size: 1.4rem;
     color: #1a1a26;
     line-height: 1;
-    font-weight: 500; }
+    font-weight: 500;
+    border-bottom: 1px solid transparent; }
     .popular-products-scroll h3:hover {
       border-bottom: 1px solid #1a1a26; }
 
@@ -481,14 +475,21 @@ h2 {
     margin-right: 30px;
     width: calc((100% - 120px) / 5); }
     .popular-products-grid .product-container h4 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #1a1a26;
       font-weight: 500;
       text-align: center; }
     .popular-products-grid .product-container span {
       color: #888890;
       text-decoration: line-through;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 1.2rem; }
+    .popular-products-grid .product-container:hover .popular-products-overlay {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .popular-products-grid .product-container h4:nth-of-type(2n + 2) {
+      font-size: 1.4rem; }
   .popular-products-grid .product-container:nth-of-type(5n + 5) {
     margin-right: 0; }
   .popular-products-grid .news {
@@ -537,7 +538,8 @@ h2 {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  display: none; }
   .popular-products-overlay h5 {
     padding: 10px 15px;
     font-size: 1rem;
@@ -705,7 +707,7 @@ h2 {
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 15px; }
-  .blog-grid p {
+  .blog-grid a {
     font-size: 1.2rem;
     color: #1a1a26;
     line-height: 1;
@@ -713,7 +715,8 @@ h2 {
     font-weight: 500;
     text-transform: capitalize;
     border-bottom: 1px solid #1a1a26;
-    display: inline; }
+    display: inline;
+    text-decoration: none; }
 
 .newsletter-maintext {
   position: relative; }

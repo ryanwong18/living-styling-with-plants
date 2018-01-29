@@ -1,6 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "mixin";
+@import "mediaq";
 
 html {
     font-size:10px;
@@ -95,16 +96,13 @@ h2 {
     height:90vh;
     position:relative;
     .header-overlay {
-        position:absolute;
-        z-index:200;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
+        height:90vh;
         display:flex;
-        flex-direction: column;
-        justify-content:center;
+        justify-content:space-between;
         align-items:center;
+        .header-overlay-text {
+            text-align: center;
+        }
         p {
             font-size:2.4rem;
             color:$pcolor;
@@ -116,6 +114,7 @@ h2 {
             font-weight:500;
             margin:0 0 30px 0;
         }
+    .header-overlay-text {
         a {
             color:#ffffff;
             font-size:1.2rem;
@@ -128,31 +127,36 @@ h2 {
         }
     }
     .header-arrows {
-        position:absolute;
-        z-index:100;
-        top:0;
-        right:3%;
-        bottom:0;
-        left:3%;
-        display:flex;
-        justify-content:space-between;
-        align-items: center;
         a {
             font-size:4rem;
             color:$primarycolor;
         }
-        a:nth-of-type(2) {
+    }
+    .header-arrow-left {
+        margin-left:30px;
+        &:hover a {
             color:$pcolor;
         }
+    }
+    .header-arrow-right {
+        margin-right:30px;
+        &:hover a {
+            color:$pcolor;
+        }
+    }
+    .header-arrow-left {
+        text-align: left;
+    }
     }
     .header-bubbles {
         display:flex;
         position:absolute;
-        width:100%;
-        height:100%;
         justify-content:center;
         align-items: flex-end;
-        padding-bottom:2%;
+        bottom:4%;
+        left:50%;
+        transform: translateX(-50%);
+        margin:0 auto;
         z-index:40;
         div {
             width:10px;
@@ -221,7 +225,7 @@ h2 {
         height:480px;
         position:relative;
         &:hover .homeplants-overlay {
-            display:block;
+            opacity:1;
         }
     }
     .homeplants-right-side-grid {
@@ -254,7 +258,8 @@ h2 {
         flex-direction:column;
         background-color:white;
         text-align: center;
-        display:none;
+        opacity:0;
+        transition:opacity 0.5s;
         h3 {
             @include h3style (2rem, $primarycolor, 1, 100);
             margin:0;
@@ -266,11 +271,17 @@ h2 {
             margin:0;
         }
     }
+    .square-image {
+        .homeplants-overlay {
+            width:170px;
+        }
+    }
 }
 
 .popular-products-text {
     position:relative;
     margin-bottom:30px;
+    // border-bottom:1px solid transparent;
     h2::after {
         content:"";
         display:block;
@@ -300,6 +311,7 @@ h2 {
         margin:20px;
         padding:5px 0;
         @include h3style (1.4rem, $primarycolor, 1, 500);
+        border-bottom:1px solid transparent;
         &:hover {
             border-bottom:1px solid $primarycolor;
         }
@@ -320,12 +332,19 @@ h2 {
         margin-right:30px;
         width:calc((100% - 120px) / 5);
         h4 {
-            @include h4style (1.2rem, $primarycolor, 500, center);
+            @include h4style (1.1rem, $primarycolor, 500, center);
         }
         span {
             color:$pcolor;
             text-decoration:line-through;
             font-weight:400;
+            font-size:1.2rem;
+        }
+        &:hover .popular-products-overlay {
+            display:flex;
+        }
+        h4:nth-of-type(2n + 2) {
+            font-size:1.4rem;
         }
     }
     .product-container:nth-of-type(5n + 5) {
@@ -379,6 +398,7 @@ h2 {
     display:flex;
     justify-content: center;
     align-items: center;
+    display:none;
     h5 {
         padding:10px 15px;
         font-size:1rem;
@@ -524,11 +544,12 @@ h2 {
         margin-top:10px;
         margin-bottom:15px;
     }
-    p {
+    a {
         @include pstyle (1.2rem, $primarycolor, 1, left, 500);
         text-transform: capitalize;
         border-bottom:1px solid $primarycolor;
         display:inline;
+        text-decoration:none;
     }
 }
 
