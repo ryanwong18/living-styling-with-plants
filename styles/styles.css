@@ -1,4 +1,3 @@
-@charset "UTF-8";
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -134,7 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 12px; }
 
 body {
   font-family: 'Poppins', sans-serif; }
@@ -181,14 +180,14 @@ h2 {
     color: #1a1a26;
     font-weight: 700;
     font-size: 1.2rem;
-    padding: 10px 13px; }
+    padding: 10px 10px; }
     .header-nav a:hover {
       color: #888890; }
 
 .header-logo {
-  -webkit-box-flex: 2;
-  -ms-flex: 2 0 auto;
-  flex: 2 0 auto; }
+  -webkit-box-flex: 3;
+  -ms-flex: 3 0 auto;
+  flex: 3 0 auto; }
   .header-logo img {
     width: 100px; }
 
@@ -430,8 +429,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #f5efef;
     position: absolute;
-    top: 40px;
-    left: 480px; }
+    top: 25%;
+    left: 47%; }
   .popular-products-text h2::before {
     content: "";
     display: block;
@@ -439,8 +438,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #a8edea;
     position: absolute;
-    top: 40px;
-    left: 440px; }
+    top: 25%;
+    left: 43%; }
 
 .popular-products-scroll {
   display: -webkit-box;
@@ -571,16 +570,16 @@ h2 {
     -ms-flex-align: center;
     align-items: center; }
     .customer-video-grid .customer-testimonial h2 {
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      margin-bottom: 15px; }
     .customer-video-grid .customer-testimonial h3 {
       font-size: 1.3rem;
       color: #1a1a26;
       line-height: 2;
       font-weight: 500;
       font-style: italic;
-      width: 75%;
-      text-align: center;
-      margin-top: -30px; }
+      width: 85%;
+      text-align: center; }
     .customer-video-grid .customer-testimonial h4 {
       font-size: 1.2rem;
       color: #888890;
@@ -588,11 +587,13 @@ h2 {
       text-align: center;
       text-transform: uppercase;
       margin-top: 10px; }
+    .customer-video-grid .customer-testimonial img {
+      width: 60%; }
   .customer-video-grid .customer-slider {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 30px; }
+    margin-top: 15px; }
     .customer-video-grid .customer-slider div {
       width: 30px;
       height: 30px;
@@ -605,10 +606,6 @@ h2 {
       transform: scale(1.5);
       border: 1px solid rgba(136, 136, 144, 0.5);
       background-clip: padding-box; }
-  .customer-video-grid h2::after {
-    content: "”";
-    display: block;
-    font-size: 50px; }
   .customer-video-grid .plant-video {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/background-image-main.jpg);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/background-image-main.jpg);
@@ -667,8 +664,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #f5efef;
     position: absolute;
-    top: 40px;
-    left: 480px; }
+    top: 70%;
+    left: 47%; }
   .blog-title h2::before {
     content: "";
     display: block;
@@ -676,8 +673,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #a8edea;
     position: absolute;
-    top: 40px;
-    left: 440px; }
+    top: 70%;
+    left: 43%; }
 
 .blog-grid {
   display: -webkit-box;
@@ -729,8 +726,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #f5efef;
     position: absolute;
-    top: 40px;
-    left: 480px; }
+    top: 25%;
+    left: 47%; }
   .newsletter-maintext h2::before {
     content: "";
     display: block;
@@ -738,8 +735,8 @@ h2 {
     height: 20px;
     border-bottom: 2px solid #a8edea;
     position: absolute;
-    top: 40px;
-    left: 440px; }
+    top: 25%;
+    left: 43%; }
   .newsletter-maintext p {
     width: 50%;
     text-align: center;
@@ -758,17 +755,15 @@ h2 {
     margin-bottom: 50px; }
 
 .newsletter-form {
-  position: relative;
+  margin-bottom: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 100px; }
+  justify-content: center; }
+  .newsletter-form form {
+    position: relative; }
   .newsletter-form input {
     border: 0px solid lightgrey;
     border-bottom: 1px solid #e6e5e1;
@@ -777,11 +772,15 @@ h2 {
     line-height: 2rem;
     text-align: left;
     font-weight: 400;
-    padding: 10px 500px 10px 0; }
+    padding: 10px 0;
+    width: 50%;
+    min-width: 600px; }
   .newsletter-form a {
     position: absolute;
     font-size: 20px;
-    left: 800px; }
+    color: #1a1a26;
+    right: 0;
+    top: 0; }
 
 .newsletter-grid {
   display: -webkit-box;
@@ -906,3 +905,264 @@ h2 {
   .bottom-footer span {
     color: #1a1a26;
     font-weight: 500; }
+
+@media (max-width: 1100px) {
+  .header-nav.wrapper {
+    padding-left: 3%;
+    padding-right: 3%; }
+  .header-hero .header-overlay-text h1 {
+    font-size: 4rem; }
+  .header-logo {
+    -webkit-box-flex: 3;
+    -ms-flex: 3 0 auto;
+    flex: 3 0 auto; } }
+
+@media (max-width: 1000px) {
+  .customer-video-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .customer-video-grid .customer-testimonial, .customer-video-grid .plant-video {
+    width: 100%;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .customer-video-grid .customer-testimonial {
+    margin-bottom: 20px; }
+  .blog-grid .blog-grid-container:nth-of-type(1) {
+    margin-left: 30px; }
+  .blog-grid .blog-grid-container:nth-of-type(3) {
+    margin-right: 30px; }
+  .newsletter-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 350px;
+    width: 50%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-bottom: 50px; }
+  .newsletter-grid img {
+    height: calc((100% - 60px) / 3);
+    width: 120px;
+    margin: 15px; }
+  .top-footer .wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 30px; }
+  .top-footer .footer-information {
+    width: 100%; }
+  .top-footer .wrapper div {
+    margin: 10px 0; }
+  .bottom-footer .wrapper {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; } }
+
+@media (max-width: 940px) {
+  .header-hero .header-overlay-text h1 {
+    font-size: 3rem; }
+  .header-hero .header-overlay-text p {
+    font-size: 1.5rem; }
+  .header-hero .header-overlay .header-overlay-text a {
+    padding: 10px 20px;
+    font-size: 1rem; }
+  .header-hero .header-overlay .header-arrows a {
+    font-size: 3rem; }
+  .header-nav a {
+    font-size: 1.1rem; }
+  .header-socialmedia-icon i {
+    font-size: 1.1rem; }
+  .header-logo img {
+    width: 80px; }
+  .header-logo {
+    -webkit-box-flex: 4;
+    -ms-flex: 4 0 auto;
+    flex: 4 0 auto; }
+  .header-nav a {
+    padding: 10px 10px; }
+  .homeplants-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .homeplants-grid .tall-image {
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 50%; }
+  .homeplants-grid .homeplants-right-side-grid {
+    width: 50%; }
+  .homeplants-grid .homeplants-overlay h3 {
+    font-size: 1.5rem;
+    padding: 5px; }
+  .homeplants-grid .square-image .homeplants-overlay {
+    width: 100px; }
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 42%; }
+  .popular-products-grid .product-container:nth-of-type(5n + 1) {
+    margin-left: 30px; }
+  .popular-products-grid .product-ontainer:nth-of-type(5n + 5) {
+    margin-right: 30px; }
+  .popular-products-grid .product-container {
+    width: calc((100% - 180px) / 5); }
+  .top-footer {
+    padding-bottom: 50px; }
+  .homeplants-grid .homeplants-overlay {
+    opacity: 1; } }
+
+@media (max-width: 768px) {
+  .header-nav ul {
+    display: none; }
+  .header-logo {
+    padding-left: 20%; }
+  .header-socialmedia-icon {
+    padding-right: 20%; }
+  .header-socialmedia-icon .notification {
+    left: 5%; }
+  .homeplants-grid .tall-image {
+    height: 100%; }
+  .homeplants-maintext {
+    margin-bottom: 50px; }
+  header, section {
+    margin-bottom: 50px; }
+  .popular-products-grid .product-container {
+    width: calc((100% - 90px) / 4); }
+  .popular-products-grid .product-container:nth-of-type(4n + 4) {
+    margin-right: 30px; }
+  .popular-products-grid .product-container:nth-of-type(4n + 5) {
+    margin-left: 30px; }
+  .popular-products-grid .product-container {
+    width: calc((100% - 150px) / 4); }
+  .customer-video-grid .plant-video .plant-video-images, .plant-video-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .customer-video-grid img {
+    margin-right: 0;
+    width: 60%;
+    margin-bottom: 15px; }
+  .customer-video-grid .customer-testimonial h2 {
+    font-size: 2rem; }
+  .customer-video-grid .customer-testimonial img {
+    width: 40%; }
+  .customer-video-grid .customer-testimonial h3, .customer-video-grid .customer-testimonial h4 {
+    font-size: 1rem; }
+  .customer-video-grid .customer-slider div {
+    height: 20px;
+    width: 20px; }
+  .blog-grid {
+    margin-top: 50px; }
+  .blog-grid h4 {
+    font-size: 1rem; }
+  .blog-grid h3 {
+    font-size: 1.2rem; }
+  .blog-grid a {
+    font-size: 1rem; }
+  .bottom-footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .newsletter-grid {
+    display: none; }
+  .newsletter-maintext p {
+    width: 80%; }
+  .homeplants-grid .homeplants-overlay h3 {
+    font-size: 1.2rem; }
+  .homeplants-grid .homeplants-overlay p {
+    font-size: 1rem; }
+  .popular-products-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media (max-width: 700px) {
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 41%; } }
+
+@media (max-width: 600px) {
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 40%; }
+  .popular-products-overlay h5 {
+    font-size: 0.8rem;
+    padding: 10px 10px; }
+  .popular-products-grid .product-container h4 {
+    font-size: 1rem; }
+  .popular-products-grid .product-container h4:nth-of-type(2n + 2) {
+    font-size: 1.2rem; }
+  .newsletter-form input {
+    min-width: 400px;
+    width: 50%; }
+  .top-footer .instagram {
+    display: none; } }
+
+@media (max-width: 500px) {
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 39%; } }
+
+@media (max-width: 480px) {
+  .header-hero .header-overlay .header-arrows a {
+    font-size: 2.5rem; }
+  .header-nav a {
+    padding: 5px; }
+  .popular-products-grid .product-container:nth-of-type(2n + 2) {
+    margin: 0 30px 0 0; }
+  .popular-products-grid .product-container {
+    width: calc((100% - 90px) / 2); }
+  .popular-products-grid .product-container:nth-of-type(2n + 1) {
+    margin: 0 30px; }
+  .blog-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .blog-grid .blog-grid-container {
+    margin: 20px 30px; }
+  .top-footer .wrapper .footer-layout {
+    margin-bottom: 30px; }
+  .homeplants-grid .tall-image {
+    margin-bottom: 10px; }
+  .homeplants-grid .square-image:first-of-type {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  .homeplants-grid .square-image:nth-of-type(2) {
+    margin-bottom: 10px; }
+  .homeplants-grid .square-image {
+    width: calc((100% - 10px) / 2); }
+  .homeplants-grid .homeplants-overlay h3 {
+    font-size: 1rem; }
+  .homeplants-grid .homeplants-overlay p {
+    font-size: 0.8rem; }
+  .newsletter-form input {
+    min-width: 300px; }
+  .bottom-footer p {
+    font-size: 0.8rem; } }

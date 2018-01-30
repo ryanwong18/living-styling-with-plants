@@ -1,3 +1,17 @@
 //typical breakpoints at 940px, 768px, 480px
 
-//media queries for header
+//MEDIA QUERIES FOR HEADER
+//targeted both .header-nav and .wrapper for specificity since targeting one won't initiate responsiveness
+@media (max-width: 1100px) {
+    .header-nav.wrapper {
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
+
+@media (max-width: 940px) {
+    .header-hero .header-overlay-text h1 {
+        font-size:30px;
+    }
+}
+
