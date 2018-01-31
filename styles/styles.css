@@ -133,7 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 html {
-  font-size: 12px; }
+  font-size: 10px; }
 
 body {
   font-family: 'Poppins', sans-serif; }
@@ -185,9 +185,9 @@ h2 {
       color: #888890; }
 
 .header-logo {
-  -webkit-box-flex: 3;
-  -ms-flex: 3 0 auto;
-  flex: 3 0 auto; }
+  -webkit-box-flex: 2;
+  -ms-flex: 2 0 auto;
+  flex: 2 0 auto; }
   .header-logo img {
     width: 100px; }
 
@@ -780,7 +780,7 @@ h2 {
     font-size: 20px;
     color: #1a1a26;
     right: 0;
-    top: 0; }
+    top: 5px; }
 
 .newsletter-grid {
   display: -webkit-box;
@@ -1033,7 +1033,10 @@ h2 {
   .header-socialmedia-icon .notification {
     left: 5%; }
   .homeplants-grid .tall-image {
-    height: 100%; }
+    height: 100%;
+    width: 60%; }
+  .homeplants-grid .homeplants-right-side-grid {
+    width: 60%; }
   .homeplants-maintext {
     margin-bottom: 50px; }
   header, section {

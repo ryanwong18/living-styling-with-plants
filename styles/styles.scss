@@ -3,7 +3,7 @@
 @import "mixin";
 
 html {
-    font-size:12px;
+    font-size:10px;
 }
 
 body {
@@ -57,7 +57,7 @@ h2 {
 }
 
 .header-logo {
-    flex:3 0 auto;
+    flex:2 0 auto;
     img {
         width:100px;
     }
@@ -611,7 +611,7 @@ h2 {
         font-size:20px;
         color:$primarycolor;
         right:0;
-        top:0;
+        top:5px;
     }
 }
 
@@ -884,6 +884,10 @@ h2 {
     }
     .homeplants-grid .tall-image {
         height:100%;
+        width:60%;
+    }
+    .homeplants-grid .homeplants-right-side-grid {
+        width:60%;
     }
     .homeplants-maintext {
         margin-bottom:50px;
@@ -958,6 +962,7 @@ h2 {
     .popular-products-overlay {
         display:flex;
     }
+
 }
 
 @media (max-width:700px) {
