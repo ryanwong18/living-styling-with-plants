@@ -7,7 +7,7 @@
 // Base styles applied across the website
 
 html {
-    font-size:10px;
+    font-size:11px;
 }
 
 body {
@@ -64,7 +64,7 @@ h2 {
 }
 
 .header-logo {
-    flex:2 0 auto;
+    flex:2.5 0 auto;
     img {
         width:100px;
     }
@@ -131,6 +131,10 @@ h2 {
             letter-spacing:1px;
             z-index:50;
         }
+
+        a:hover {
+            background-color:darken($color:#f07f84, $amount: 10%)
+        }
     }
     .header-arrows {
         a {
@@ -171,8 +175,8 @@ h2 {
             background-color:$primarycolor;
             margin:5px;
         }
-        div:nth-of-type(2) {
-            background-color:$pcolor;
+        div:hover {
+            background-color: $pcolor;
         }
     }
 }
@@ -191,6 +195,7 @@ h2 {
         p {
             @include pstyle(1.4rem, #a8edea, 1, center, 400);
             margin:0;
+            color:darken($color: #a8edea, $amount: 30%);
         }
         h2 {
             margin:1rem;
@@ -317,13 +322,14 @@ h2 {
 .popular-products-scroll {
     display:flex;
     justify-content: center;
-    h3 {
+    a {
         margin:20px;
         padding:5px 0;
         @include h3style (1.4rem, $primarycolor, 1, 500);
         border-bottom:1px solid transparent;
         &:hover {
-            border-bottom:1px solid $primarycolor;
+            border-bottom:1px solid $pcolor;
+            color:$pcolor;
         }
     }
 }
@@ -451,7 +457,7 @@ h2 {
             margin-top:10px;
         }
         img {
-            width:60%;
+            width:100%;
         }
     }
     .customer-slider {
@@ -463,11 +469,10 @@ h2 {
             background-color:$pcolor;
             border-radius: 50%;
             margin:0 10px;
+            transition: all 0.5s;
         }
-        div:nth-of-type(2) {
+        div:hover {
             transform:scale(1.5);
-            border:1px solid rgba(136, 136, 144, 0.5);
-            background-clip: padding-box;
         }
     }
 
@@ -483,9 +488,6 @@ h2 {
         @include pstyle (1.4rem, white, 1, center, 400);
         text-transform: uppercase;
         letter-spacing: 3px;
-    }
-    img {
-        margin-right:15px;
     }
     .play-icon {
         margin-bottom:40px;
@@ -505,6 +507,9 @@ h2 {
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);
+        }
+        div:nth-of-type(3):hover {
+            color:darken($color: white, $amount: 20%)
         }
     }
 }
@@ -564,6 +569,10 @@ h2 {
         border-bottom:1px solid $primarycolor;
         display:inline;
         text-decoration:none;
+    }
+    a:hover {
+        border-bottom:1px solid $pcolor;
+        color:$pcolor;
     }
 }
 
@@ -688,6 +697,9 @@ h2 {
             font-size:2rem;
             padding-right:30px;
         }
+        a:nth-of-type(5) {
+            padding-right:0;
+        }
         a:hover {
             color:$pcolor;
         }
@@ -777,7 +789,7 @@ h2 {
         margin-left:50%;
         transform: translateX(-50%);
     }
-    .customer-video-grid .customer-testimonial {
+    .customer-video-grid {
         margin-bottom:20px;
     }
     .blog-grid .blog-grid-container:nth-of-type(1) {
@@ -847,17 +859,17 @@ h2 {
         padding:10px 10px;
     }
     .homeplants-grid {
-        flex-direction:column;
         align-items: center;
         justify-content: center;
     }
     .homeplants-grid .tall-image {
         margin-bottom:30px;
         margin-right:0;
-        width:50%;
+        width:80%;
+        height:100%;
     }
     .homeplants-grid .homeplants-right-side-grid {
-        width:50%;
+        width:80%;
     }
     .homeplants-grid .homeplants-overlay h3 {
         font-size:1.5rem;
@@ -865,6 +877,9 @@ h2 {
     }
     .homeplants-grid .square-image .homeplants-overlay {
         width:100px;
+    }
+    .wide-image {
+        width:100%;
     }
     .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
         left: 42%;
@@ -901,10 +916,10 @@ h2 {
     }
     .homeplants-grid .tall-image {
         height:100%;
-        width:60%;
+        width:80%;
     }
     .homeplants-grid .homeplants-right-side-grid {
-        width:60%;
+        width:80%;
     }
     .homeplants-maintext {
         margin-bottom:50px;
@@ -939,10 +954,10 @@ h2 {
         font-size:2rem;
     }
     .customer-video-grid .customer-testimonial img {
-        width:40%;
+        width:100%;
     }
-    .customer-video-grid .customer-testimonial h3, .customer-video-grid .customer-testimonial h4 {
-        font-size:1rem;
+    .smart-quote {
+        width:5%;
     }
     .customer-video-grid .customer-slider div {
         height:20px;
@@ -957,9 +972,6 @@ h2 {
     .blog-grid h3 {
         font-size:1.2rem;
     }
-    .blog-grid a {
-        font-size:1rem;
-    }
     .bottom-footer .wrapper {
         flex-direction: column;
         align-items: center;
@@ -969,12 +981,6 @@ h2 {
     }
     .newsletter-maintext p {
         width:80%;
-    }
-    .homeplants-grid .homeplants-overlay h3 {
-        font-size:1.2rem;
-    }
-    .homeplants-grid .homeplants-overlay p {
-        font-size:1rem;
     }
     .popular-products-overlay {
         display:flex;
@@ -986,6 +992,12 @@ h2 {
     .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
         left: 41%;
     }
+    .homeplants-grid .square-image {
+        width:100%;
+    }
+    .homeplants-grid .homeplants-image-container {
+        margin-right:0;
+    }
 }
 
 @media (max-width:600px) {
@@ -995,9 +1007,6 @@ h2 {
     .popular-products-overlay h5 {
         font-size:0.8rem;
         padding:10px 10px;
-    }
-    .popular-products-grid .product-container h4 {
-        font-size:1rem;
     }
     .popular-products-grid .product-container h4:nth-of-type(2n + 2) {
         font-size:1.2rem;
@@ -1047,25 +1056,56 @@ h2 {
         margin-bottom:10px;
     }
     .homeplants-grid .square-image:first-of-type {
-        margin-right:10px;
         margin-bottom:10px;
     }
     .homeplants-grid .square-image:nth-of-type(2) {
         margin-bottom:10px;
     }
     .homeplants-grid .square-image {
-        width:calc((100% - 10px) / 2);
-    }
-    .homeplants-grid .homeplants-overlay h3 {
-        font-size:1rem;
-    }
-    .homeplants-grid .homeplants-overlay p {
-        font-size:0.8rem;
+        width:100%;
     }
     .newsletter-form input {
         min-width:300px;
     }
     .bottom-footer p {
         font-size:0.8rem;
+    }
+}
+
+@media (max-width:) {
+    .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 37%;
+}
+}
+
+@media (max-width:400px) {
+    .popular-products-scroll a {
+        font-size:1.2rem;
+    }
+    .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+        left: 36%;
+    }
+}
+
+@media (max-width:385px) {
+    .newsletter-maintext h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 20px;
+        border-bottom: 2px solid #f5efef;
+        position: absolute;
+        top: 34%;
+        left: 47%;
+    }
+    .newsletter-maintext h2::before {
+        left: 36%;
+        top:34%;
+    }   
+    .newsletter-form input {
+        min-width: 260px;
+    }
+    .popular-products-scroll a {
+        margin: 15px;
     }
 }

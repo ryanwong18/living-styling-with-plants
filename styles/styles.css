@@ -133,7 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px; }
+  font-size: 11px; }
 
 body {
   font-family: 'Poppins', sans-serif; }
@@ -185,9 +185,9 @@ h2 {
       color: #888890; }
 
 .header-logo {
-  -webkit-box-flex: 2;
-  -ms-flex: 2 0 auto;
-  flex: 2 0 auto; }
+  -webkit-box-flex: 2.5;
+  -ms-flex: 2.5 0 auto;
+  flex: 2.5 0 auto; }
   .header-logo img {
     width: 100px; }
 
@@ -252,6 +252,8 @@ h2 {
       font-weight: 700;
       letter-spacing: 1px;
       z-index: 50; }
+    .header-hero .header-overlay .header-overlay-text a:hover {
+      background-color: #eb5158; }
     .header-hero .header-overlay .header-arrows a {
       font-size: 4rem;
       color: #1a1a26; }
@@ -289,7 +291,7 @@ h2 {
       border-radius: 50%;
       background-color: #1a1a26;
       margin: 5px; }
-    .header-hero .header-bubbles div:nth-of-type(2) {
+    .header-hero .header-bubbles div:hover {
       background-color: #888890; }
 
 .homeplants-maintext {
@@ -316,7 +318,8 @@ h2 {
       line-height: 1;
       text-align: center;
       font-weight: 400;
-      margin: 0; }
+      margin: 0;
+      color: #2bd1ca; }
     .homeplants-maintext .homeplants-title h2 {
       margin: 1rem; }
     .homeplants-maintext .homeplants-title img {
@@ -448,7 +451,7 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .popular-products-scroll h3 {
+  .popular-products-scroll a {
     margin: 20px;
     padding: 5px 0;
     font-size: 1.4rem;
@@ -456,8 +459,9 @@ h2 {
     line-height: 1;
     font-weight: 500;
     border-bottom: 1px solid transparent; }
-    .popular-products-scroll h3:hover {
-      border-bottom: 1px solid #1a1a26; }
+    .popular-products-scroll a:hover {
+      border-bottom: 1px solid #888890;
+      color: #888890; }
 
 .popular-products-grid {
   display: -webkit-box;
@@ -588,7 +592,7 @@ h2 {
       text-transform: uppercase;
       margin-top: 10px; }
     .customer-video-grid .customer-testimonial img {
-      width: 60%; }
+      width: 100%; }
   .customer-video-grid .customer-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -599,13 +603,14 @@ h2 {
       height: 30px;
       background-color: #888890;
       border-radius: 50%;
-      margin: 0 10px; }
-    .customer-video-grid .customer-slider div:nth-of-type(2) {
+      margin: 0 10px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .customer-video-grid .customer-slider div:hover {
       -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
-      transform: scale(1.5);
-      border: 1px solid rgba(136, 136, 144, 0.5);
-      background-clip: padding-box; }
+      transform: scale(1.5); }
   .customer-video-grid .plant-video {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/background-image-main.jpg);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/background-image-main.jpg);
@@ -633,8 +638,6 @@ h2 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 3px; }
-  .customer-video-grid img {
-    margin-right: 15px; }
   .customer-video-grid .play-icon {
     margin-bottom: 40px;
     position: relative; }
@@ -654,6 +657,8 @@ h2 {
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
+    .customer-video-grid .play-icon div:nth-of-type(3):hover {
+      color: #cccccc; }
 
 .blog-title {
   position: relative; }
@@ -714,6 +719,9 @@ h2 {
     border-bottom: 1px solid #1a1a26;
     display: inline;
     text-decoration: none; }
+  .blog-grid a:hover {
+    border-bottom: 1px solid #888890;
+    color: #888890; }
 
 .newsletter-maintext {
   position: relative; }
@@ -844,6 +852,8 @@ h2 {
       color: #1a1a26;
       font-size: 2rem;
       padding-right: 30px; }
+    .top-footer .footer-socialmedia a:nth-of-type(5) {
+      padding-right: 0; }
     .top-footer .footer-socialmedia a:hover {
       color: #888890; }
   .top-footer .footer-title {
@@ -929,7 +939,7 @@ h2 {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
-  .customer-video-grid .customer-testimonial {
+  .customer-video-grid {
     margin-bottom: 20px; }
   .blog-grid .blog-grid-container:nth-of-type(1) {
     margin-left: 30px; }
@@ -989,10 +999,6 @@ h2 {
   .header-nav a {
     padding: 10px 10px; }
   .homeplants-grid {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1002,14 +1008,17 @@ h2 {
   .homeplants-grid .tall-image {
     margin-bottom: 30px;
     margin-right: 0;
-    width: 50%; }
+    width: 80%;
+    height: 100%; }
   .homeplants-grid .homeplants-right-side-grid {
-    width: 50%; }
+    width: 80%; }
   .homeplants-grid .homeplants-overlay h3 {
     font-size: 1.5rem;
     padding: 5px; }
   .homeplants-grid .square-image .homeplants-overlay {
     width: 100px; }
+  .wide-image {
+    width: 100%; }
   .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
     left: 42%; }
   .popular-products-grid .product-container:nth-of-type(5n + 1) {
@@ -1034,9 +1043,9 @@ h2 {
     left: 5%; }
   .homeplants-grid .tall-image {
     height: 100%;
-    width: 60%; }
+    width: 80%; }
   .homeplants-grid .homeplants-right-side-grid {
-    width: 60%; }
+    width: 80%; }
   .homeplants-maintext {
     margin-bottom: 50px; }
   header, section {
@@ -1070,9 +1079,9 @@ h2 {
   .customer-video-grid .customer-testimonial h2 {
     font-size: 2rem; }
   .customer-video-grid .customer-testimonial img {
-    width: 40%; }
-  .customer-video-grid .customer-testimonial h3, .customer-video-grid .customer-testimonial h4 {
-    font-size: 1rem; }
+    width: 100%; }
+  .smart-quote {
+    width: 5%; }
   .customer-video-grid .customer-slider div {
     height: 20px;
     width: 20px; }
@@ -1082,8 +1091,6 @@ h2 {
     font-size: 1rem; }
   .blog-grid h3 {
     font-size: 1.2rem; }
-  .blog-grid a {
-    font-size: 1rem; }
   .bottom-footer .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1096,10 +1103,6 @@ h2 {
     display: none; }
   .newsletter-maintext p {
     width: 80%; }
-  .homeplants-grid .homeplants-overlay h3 {
-    font-size: 1.2rem; }
-  .homeplants-grid .homeplants-overlay p {
-    font-size: 1rem; }
   .popular-products-overlay {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1107,7 +1110,11 @@ h2 {
 
 @media (max-width: 700px) {
   .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
-    left: 41%; } }
+    left: 41%; }
+  .homeplants-grid .square-image {
+    width: 100%; }
+  .homeplants-grid .homeplants-image-container {
+    margin-right: 0; } }
 
 @media (max-width: 600px) {
   .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
@@ -1115,8 +1122,6 @@ h2 {
   .popular-products-overlay h5 {
     font-size: 0.8rem;
     padding: 10px 10px; }
-  .popular-products-grid .product-container h4 {
-    font-size: 1rem; }
   .popular-products-grid .product-container h4:nth-of-type(2n + 2) {
     font-size: 1.2rem; }
   .newsletter-form input {
@@ -1155,17 +1160,40 @@ h2 {
   .homeplants-grid .tall-image {
     margin-bottom: 10px; }
   .homeplants-grid .square-image:first-of-type {
-    margin-right: 10px;
     margin-bottom: 10px; }
   .homeplants-grid .square-image:nth-of-type(2) {
     margin-bottom: 10px; }
   .homeplants-grid .square-image {
-    width: calc((100% - 10px) / 2); }
-  .homeplants-grid .homeplants-overlay h3 {
-    font-size: 1rem; }
-  .homeplants-grid .homeplants-overlay p {
-    font-size: 0.8rem; }
+    width: 100%; }
   .newsletter-form input {
     min-width: 300px; }
   .bottom-footer p {
     font-size: 0.8rem; } }
+
+@media (max-width: ) {
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 37%; } }
+
+@media (max-width: 400px) {
+  .popular-products-scroll a {
+    font-size: 1.2rem; }
+  .popular-products-text h2::before, .blog-title h2::before, .newsletter-maintext h2::before {
+    left: 36%; } }
+
+@media (max-width: 385px) {
+  .newsletter-maintext h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-bottom: 2px solid #f5efef;
+    position: absolute;
+    top: 34%;
+    left: 47%; }
+  .newsletter-maintext h2::before {
+    left: 36%;
+    top: 34%; }
+  .newsletter-form input {
+    min-width: 260px; }
+  .popular-products-scroll a {
+    margin: 15px; } }
